@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { AArrowDown, ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { heroData } from "../data/hero";
 
 const Hero = ({ hasAnimated }) => {
@@ -81,7 +81,7 @@ const Hero = ({ hasAnimated }) => {
                     </div>
 
                     {/* Name */}
-                    <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-black via-gray-800 to-gray-600 bg-clip-text text-transparent animate-fad-in-up">
+                    <h1 className="text-5xl md:text-7xl leading-tight font-bold mb-4 bg-gradient-to-r from-black via-gray-800 to-gray-600 bg-clip-text text-transparent animate-fad-in-up">
                         {heroData.name}
                     </h1>
 
@@ -116,10 +116,16 @@ const Hero = ({ hasAnimated }) => {
                                         : "border-2 border-black text-black hover:bg-black hover:text-white"
                                 }`}
                             >
-                                {button.variant === 'primary' && (
+                                {button.variant === "primary" && (
                                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 )}
-                                <span className={`button.variant === 'primary` ? 'relative z-10' : ''}>
+                                <span
+                                    className={
+                                        `button.variant === 'primary`
+                                            ? "relative z-10"
+                                            : ""
+                                    }
+                                >
                                     {button.text}
                                 </span>
                             </a>
@@ -128,21 +134,56 @@ const Hero = ({ hasAnimated }) => {
 
                     {/* Social Links */}
                     <div className="flex justify-center space-x-6 mb-8 animate-fade-in-up delay-400">
-                        {heroData.socialLinks.map ((social, index) =>{
-                            const IconComponent = social.icon === 'Github' ? Github : social.icon === 'Linkedin' ? Linkedin : Mail;
+                        {heroData.socialLinks.map((social, index) => {
+                            const IconComponent =
+                                social.icon === "Github"
+                                    ? Github
+                                    : social.icon === "Linkedin"
+                                    ? Linkedin
+                                    : Mail;
                             return (
-                                <a key={index} href={social.url} className="group p-3 bg-white rounded-full shadow-md hover:shadow-lg transition_all duration-300 transform hover:scale-110 hover:-translate-y-1">
-                                    <IconComponent className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors "/>
-
+                                <a
+                                    key={index}
+                                    href={social.url}
+                                    className="group p-3 bg-white rounded-full shadow-md hover:shadow-lg transition_all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                                >
+                                    <IconComponent className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors " />
                                 </a>
-                            )
+                            );
                         })}
                     </div>
 
                     {/* Stats */}
-                    <div></div>
+                    <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-8 animate-fade-in-up delay-500">
+                        {heroData.stats.map((stat, index) => (
+                            <div key={index} className="text-center">
+                                <div className="text-2xl font-bold text-black mb-1">
+                                    {stat.number}
+                                </div>
+                                <div className="text-xs text-gray-600">
+                                    {stat.label}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    {/* Scroll Indicator */}
+                    <div className="animate-bounce">
+                        <button
+                            onClick={scrollToAbout}
+                            className="group flex flex-col items-center text-gray-600 hover:text-black transition-color cursor-pointer"
+                        >
+                            <span className="text-sm mb-2">Learn More</span>
+                            <ArrowDown className="w-6 h-6  group-hover:transform group-hover:translate-y-1 transition-transform" />
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            {/* Floating Elemetns */}
+            <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400 rounded-full opacity-60 animate-float "></div>
+            <div className="absolute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full opacity-60 animate-float delay-1000"></div>
+            <div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full opacity-60 animate-float delay-2000"></div>
+            <div className="absolute bottom-20 right-10 w-5 h-5 bg-orange-400 rounded-full opacity-60 animate-float delay-3000"></div>
         </section>
     );
 };
