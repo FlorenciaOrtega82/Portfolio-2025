@@ -14,7 +14,6 @@ const Projects = ({ hasAnimated }) => {
                     }`}
                 >
                     <h2 className="text-4xl font-bold mb-12 text-center">
-                        {" "}
                         Featured Projects
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

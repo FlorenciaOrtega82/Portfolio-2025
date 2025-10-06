@@ -153,7 +153,7 @@ const Hero = ({ hasAnimated }) => {
                         })}
                     </div>
 
-                    {/* Stats */}
+                    {/* Stats
                     <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-8 animate-fade-in-up delay-500">
                         {heroData.stats.map((stat, index) => (
                             <div key={index} className="text-center">
@@ -165,7 +165,7 @@ const Hero = ({ hasAnimated }) => {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     {/* Scroll Indicator */}
                     <div className="animate-bounce">
                         <button
