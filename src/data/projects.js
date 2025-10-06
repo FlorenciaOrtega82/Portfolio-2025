@@ -5,7 +5,7 @@ export const projects = [
             "Created a personal portfolio website to showcase projects and skills, utilizing modern design principles and responsive layouts.",
         tech: ["HTML", "JavaScript", "React", "Tailwind CSS"],
         github: "https://github.com/FlorenciaOrtega82",
-        demo: "https://portfolio-demo.com",
+        demo: "https://portfolio-web-nu-murex.vercel.app",
         image: "./images/project-portfolio.png",
     },
     {
