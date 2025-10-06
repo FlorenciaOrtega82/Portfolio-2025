@@ -6,14 +6,16 @@ export const projects = [
         tech: ["HTML", "JavaScript", "React", "Tailwind CSS"],
         github: "https://github.com/FlorenciaOrtega82",
         demo: "https://portfolio-demo.com",
+        image: "./images/project-portfolio.png",
     },
     {
         title: "Price Calculator",
         description:
-            "Built a dynamic pricing calculator app using React for the frontend, Node.js + Express for the backend API, handling real-time calculations, input validation, and state management.",
+            "Built a dynamic pricing calculator app using an IA Lovable, handling real-time calculations, input validation, and state management.",
         tech: ["HTML", "React", "Tailwind CSS", "TypeScript"],
         github: "https://github.com/FlorenciaOrtega82/calculadora-de-precios-",
         demo: "https://calculadora-five-ashy.vercel.app",
+        image: "./images/project-calculator.png",
     },
     // {
     //     title: "Task Management App",
