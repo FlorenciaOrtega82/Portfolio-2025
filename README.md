@@ -1,16 +1,18 @@
-# React + Vite
+# 🌸 Portfolio 2025 — Florencia Ortega
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! I'm **Florencia Ortega**, a **Frontend Developer & Artist**.  
+This is my personal portfolio built with **React** and **Tailwind CSS**, showcasing my projects, skills, and ways to connect.  
+Designed with a clean, minimalist style, smooth animations, and a fully responsive layout for an engaging user experience.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies
+- React  
+- Tailwind CSS  
+- Vite  
+- JavaScript  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 About the Project
+This portfolio acts as an interactive showcase of my work.  
+It features an "About Me" section, highlights of my projects with descriptions, technologies used, and links to demos and GitHub repositories.
 
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌐 Live Project
+👉 [View Portfolio](https://portfolio-web-nu-murex.vercel.app)
