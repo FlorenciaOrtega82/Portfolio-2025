@@ -7,6 +7,7 @@ const ProjectCard = ({ project }) => {
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
                 {project.image ? (
                     <img
+                        loading="lazy"
                         src={project.image}
                         alt={`${project.title} preview`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
