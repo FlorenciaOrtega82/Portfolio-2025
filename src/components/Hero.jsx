@@ -108,6 +108,7 @@ const Hero = ({ hasAnimated }) => {
                     <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8 animate-fade-in-up delay-300">
                         {heroData.ctaButtons.map((button, index) => (
                             <a
+                                alt="CTA Button"
                                 key={index}
                                 href={button.href}
                                 className={`group relative px-5 py-2.5 rounded-lg transition-all duration-300 font-medium text-sm ${
@@ -143,6 +144,7 @@ const Hero = ({ hasAnimated }) => {
                                     : Mail;
                             return (
                                 <a
+                                    alt="Social Link"
                                     key={index}
                                     href={social.url}
                                     className="group p-3 bg-white rounded-full shadow-md hover:shadow-lg transition_all duration-300 transform hover:scale-110 hover:-translate-y-1"
@@ -169,6 +171,7 @@ const Hero = ({ hasAnimated }) => {
                     {/* Scroll Indicator */}
                     <div className="animate-bounce">
                         <button
+                            alt="Scroll Down Button"
                             onClick={scrollToAbout}
                             className="group flex flex-col items-center text-gray-600 hover:text-black transition-color cursor-pointer"
                         >

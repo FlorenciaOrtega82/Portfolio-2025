@@ -77,8 +77,9 @@ const Navigation = () => {
                             </a>
                         ))}
                     </div>
-                    {/*Movile Men Button */}
+                    {/*Movile Menu Button */}
                     <button
+                        alt="Menu Button"
                         onClick={toggleMobileMenu}
                         className={`md:hidden p-2 transition-colors cursor-pointer ${
                             isScrolled
