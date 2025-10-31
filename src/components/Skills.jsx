@@ -5,7 +5,7 @@ const Skills = ({ hasAnimated }) => {
     return (
         <section
             id="skills"
-            className="py-16 px-6 bg-gray-50">
+            className="py-16 px-24 bg-gray-50">
                 <div className={`transitio-all duration-1000 delay-400 ${hasAnimated.skills ? 'opacity-100 translate-y-0':'opacity-0 translate-y-10'}`}>
                     <h2 className="text-4xl font-bold mb-12 text-center">
                         Skills & Technologies

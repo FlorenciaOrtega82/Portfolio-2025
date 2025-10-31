@@ -35,6 +35,7 @@ const Navigation = () => {
         { href: "#projects", label: "Projects" },
         { href: "#skills", label: "Skills" },
         { href: "#contact", label: "Contact" },
+        { href: "#art", label: "Art Side" },
     ];
     return (
         <nav
