@@ -1,8 +1,11 @@
 import React from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import {useLanguage} from "../context/LanguageContext.jsx"
 
 const Projects = ({ hasAnimated }) => {
+    const { lang } = useLanguage();
+
     return (
         <section id="projects" className="py-16 px-6">
             <div className="max-w-6xl mx-auto">
@@ -18,7 +21,7 @@ const Projects = ({ hasAnimated }) => {
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project, index) => (
-                            <ProjectCard key={index} project={project} />
+                            <ProjectCard key={index} project={project} lang={lang}/>
                         ))}
                     </div>
                 </div>

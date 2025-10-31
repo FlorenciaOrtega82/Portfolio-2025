@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const ArtCard = ({ art }) => {
   const [isZoomed, setIsZoomed] = useState(false);
+  const {lang} = useLanguage();
 
   return (
     <>
@@ -27,10 +29,10 @@ const ArtCard = ({ art }) => {
 
         <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-2xl font-semibold mb-3 group-hover:text-gray-600 transition-colors">
-            {art?.title ?? "Untitled"}
+            {art?.title[lang] ?? "Untitled"}
           </h3>
           <p className="text-gray-600 mb-4 text-base leading-relaxed flex-grow">
-            {art?.description ?? "No description"}
+            {art?.description[lang] ?? "No description"}
           </p>
         </div>
       </div>

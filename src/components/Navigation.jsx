@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X,Globe } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 const Navigation = () => {
+    const {lang, toggleLang} = useLanguage();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const toggleMobileMenu = () => {
@@ -77,6 +79,15 @@ const Navigation = () => {
                                 {item.label}
                             </a>
                         ))}
+
+                        {/* 🌐 Botón de idioma */}
+                        <button
+                            onClick={toggleLang}
+                            className="flex items-center gap-1 border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 transition"
+                        >
+                            <Globe className="w-4 h-4" />
+                            {lang === "en" ? "EN" : "ES"}
+                        </button>
                     </div>
                     {/*Movile Menu Button */}
                     <button
@@ -117,6 +128,16 @@ const Navigation = () => {
                                 {item.label}
                             </a>
                         ))}
+
+
+                        {/* 🌐 Botón idioma en móvil */}
+                        <button
+                            onClick={toggleLang}
+                            className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100 transition"
+                        >
+                            <Globe className="w-4 h-4" />
+                            {lang === "en" ? "Español" : "English"}
+                        </button>
                     </div>
                 </div>
             </div>

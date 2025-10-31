@@ -1,7 +1,9 @@
 import React from "react";
 import { Github, ExternalLink, Code } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext.jsx";
 
 const ProjectCard = ({ project }) => {
+    const { lang } = useLanguage();
     return (
         <div className="group bg-white border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden">
@@ -20,10 +22,10 @@ const ProjectCard = ({ project }) => {
             </div>
             <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-gray-600 transition-colors">
-                    {project.title}
+                    {project.title[lang]}
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
-                    {project.description}
+                    {project.description[lang]}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
